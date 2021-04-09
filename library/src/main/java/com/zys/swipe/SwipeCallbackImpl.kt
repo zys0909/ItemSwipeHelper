@@ -2,6 +2,7 @@ package com.zys.swipe
 
 import android.animation.ObjectAnimator
 import android.graphics.Canvas
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -33,6 +34,7 @@ internal class SwipeCallbackImpl(lifecycle: Lifecycle) : ItemTouchHelper.Callbac
     init {
         lifecycle.addObserver(object : LifecycleEventObserver {
             override fun onStateChanged(source: LifecycleOwner, event: Lifecycle.Event) {
+                 Log.i("测试TAG", event.name)
                 if (event == Lifecycle.Event.ON_PAUSE) {
                     reset()
                 }
