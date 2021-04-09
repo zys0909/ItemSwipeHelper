@@ -9,10 +9,10 @@ import android.util.TypedValue
  * author zys
  * create by 2021/4/9
  */
-internal val Number.dp: Int
+val Number.dp: Int
     get() = this.dpf.toInt()
 
-internal val Number.dpf: Float
+val Number.dpf: Float
     get() = TypedValue.applyDimension(
         TypedValue.COMPLEX_UNIT_DIP,
         this.toFloat(),
